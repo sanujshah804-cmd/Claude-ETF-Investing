@@ -4,7 +4,7 @@
     "total_market_value": 42452.00,
     "total_invested_value": 42452.00,
     "positions": [
-      {"symbol": "IAU",  "quantity": 45.5,  "cost_basis": 116.50, "market_price": 116.50, "invested_amount": 5301.75, "market_value": 5301.75, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 12.49},
+      {"symbol": "IAU",  "quantity": 45.5,  "cost_basis": 116.522, "market_price": 116.50, "invested_amount": 5301.75, "market_value": 5301.75, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 12.49},
       {"symbol": "SOXX", "quantity": 12.0,  "cost_basis": 318.47, "market_price": 318.47, "invested_amount": 3821.64, "market_value": 3821.64, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 9.00},
       {"symbol": "EMXC", "quantity": 35.0,  "cost_basis": 121.29, "market_price": 121.29, "invested_amount": 4245.15, "market_value": 4245.15, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 10.00},
       {"symbol": "PPA",  "quantity": 33.0,  "cost_basis": 122.21, "market_price": 122.21, "invested_amount": 4032.93, "market_value": 4032.93, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 9.50},
@@ -14,7 +14,7 @@
       {"symbol": "GEV",  "quantity": 27.0,  "cost_basis": 47.16,  "market_price": 47.16,  "invested_amount": 1273.32, "market_value": 1273.32, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 3.00},
       {"symbol": "NBIS", "quantity": 27.0,  "cost_basis": 23.58,  "market_price": 23.58,  "invested_amount":  636.66, "market_value":  636.66, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 1.50},
       {"symbol": "IBIT", "quantity": 8.0,   "cost_basis": 106.13, "market_price": 106.13, "invested_amount":  849.04, "market_value":  849.04, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 2.00},
-      {"symbol": "SMIN", "quantity": 55.0,  "cost_basis": 67.15,  "market_price": 67.15,  "invested_amount": 3692.75, "market_value": 3692.75, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 8.70},
+      {"symbol": "SMIN", "quantity": 55.0,  "cost_basis": 67.1409, "market_price": 67.15,  "invested_amount": 3692.75, "market_value": 3692.75, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 8.70},
       {"symbol": "EWY",  "quantity": 120.0, "cost_basis": 30.42,  "market_price": 30.42,  "invested_amount": 3650.40, "market_value": 3650.40, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 8.60},
       {"symbol": "QQQM", "quantity": 37.0,  "cost_basis": 48.19,  "market_price": 48.19,  "invested_amount": 1783.03, "market_value": 1783.03, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 4.20}
     ]

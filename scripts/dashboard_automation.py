@@ -139,6 +139,12 @@ try:
     print(f"✅ Dashboard generated with embedded data at {output_file}")
     print(f"   File size: {len(html_with_data)} bytes")
 
+    # Also write to root index.html — GitHub Pages serves from repo root
+    root_index = PROJECT_DIR / "index.html"
+    with open(root_index, 'w') as f:
+        f.write(html_with_data)
+    print(f"✅ Root index.html updated: {root_index}")
+
 except Exception as e:
     print(f"ERROR generating dashboard: {e}")
     sys.exit(1)

@@ -4,8 +4,9 @@
 .env.local
 .env.*.local
 
-# Large IBKR data files
+# Large IBKR data files (live AND paper raw XMLs — never commit)
 data/ibkr_flex_*.xml
+data/paper/
 data/positions_*.csv
 data/external_data_cache/
 
