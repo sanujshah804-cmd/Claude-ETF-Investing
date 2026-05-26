@@ -1,0 +1,22 @@
+{
+  "2026-05-26": {
+    "date": "2026-05-26",
+    "total_market_value": 42452.00,
+    "total_invested_value": 42452.00,
+    "positions": [
+      {"symbol": "IAU", "quantity": 45.5, "market_price": 116.50, "market_value": 5301.75, "percentage": 12.49},
+      {"symbol": "SOXX", "quantity": 12.0, "market_price": 318.47, "market_value": 3821.64, "percentage": 9.00},
+      {"symbol": "EMXC", "quantity": 35.0, "market_price": 121.29, "market_value": 4245.15, "percentage": 10.00},
+      {"symbol": "PPA", "quantity": 33.0, "market_price": 122.21, "market_value": 4032.93, "percentage": 9.50},
+      {"symbol": "VOOG", "quantity": 35.0, "market_price": 121.29, "market_value": 4245.15, "percentage": 10.00},
+      {"symbol": "AMZN", "quantity": 4.7, "market_price": 586.25, "market_value": 2755.38, "percentage": 6.49},
+      {"symbol": "GOOG", "quantity": 4.7, "market_price": 586.25, "market_value": 2755.38, "percentage": 6.49},
+      {"symbol": "GEV", "quantity": 27.0, "market_price": 47.16, "market_value": 1273.32, "percentage": 3.00},
+      {"symbol": "NBIS", "quantity": 27.0, "market_price": 23.58, "market_value": 636.66, "percentage": 1.50},
+      {"symbol": "IBIT", "quantity": 8.0, "market_price": 106.13, "market_value": 849.04, "percentage": 2.00},
+      {"symbol": "SMIN", "quantity": 55.0, "market_price": 67.15, "market_value": 3692.75, "percentage": 8.70},
+      {"symbol": "EWY", "quantity": 120.0, "market_price": 30.42, "market_value": 3650.40, "percentage": 8.60},
+      {"symbol": "QQQM", "quantity": 37.0, "market_price": 48.19, "market_value": 1783.03, "percentage": 4.20}
+    ]
+  }
+}
