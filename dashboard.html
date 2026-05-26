@@ -416,10 +416,10 @@
             let rows = '';
             positions.forEach(pos => {
                 // Cost basis: use stored value, fall back to market_price (Day 1)
-                const costBasis      = pos.cost_basis    !== undefined ? pos.cost_basis    : pos.market_price;
+                const costBasis      = pos.cost_basis      !== undefined ? pos.cost_basis      : pos.market_price;
                 const investedAmount = pos.invested_amount !== undefined ? pos.invested_amount : (pos.quantity * costBasis);
-                const pnlDollars     = pos.pnl_dollars  !== undefined ? pos.pnl_dollars  : (pos.market_value - investedAmount);
-                const pnlPct         = pos.pnl_pct      !== undefined ? pos.pnl_pct      : (investedAmount > 0 ? (pnlDollars / investedAmount) * 100 : 0);
+                const pnlDollars     = pos.pnl_dollars     !== undefined ? pos.pnl_dollars     : (pos.market_value - investedAmount);
+                const pnlPct         = pos.pnl_pct         !== undefined ? pos.pnl_pct         : (investedAmount > 0 ? (pnlDollars / investedAmount) * 100 : 0);
 
                 const pnlClass = pnlDollars >= 0 ? 'positive' : 'negative';
                 const name     = TICKER_NAMES[pos.symbol] || pos.symbol;
@@ -441,6 +441,32 @@
                     </tr>
                 `;
             });
+
+            // ── Cash row ─────────────────────────────────────────────────────
+            // Derive from stored cash_value, or calculate from account total minus equity sum.
+            const totalAccountValue = snapshot.total_market_value || 0;
+            const cashValue = snapshot.cash_value !== undefined
+                ? snapshot.cash_value
+                : Math.max(0, totalAccountValue - totalMarket);
+            const cashPct = totalAccountValue > 0 ? (cashValue / totalAccountValue) * 100 : 0;
+
+            if (cashValue > 0.005) {
+                rows += `
+                    <tr style="opacity:0.75;">
+                        <td style="color:#888; font-family:inherit; font-weight:500;">CASH</td>
+                        <td class="name-cell" style="color:#666;">USD Cash (Uninvested)</td>
+                        <td style="color:#666;">—</td>
+                        <td>$${fmt2(cashValue)}</td>
+                        <td>$${fmt2(cashValue)}</td>
+                        <td class="neutral">—</td>
+                        <td class="neutral">—</td>
+                        <td>${cashPct.toFixed(2)}%</td>
+                    </tr>
+                `;
+                totalInvested += cashValue;
+                totalMarket   += cashValue;
+                // cash P&L is always zero — totalPnl unchanged
+            }
 
             const totalPnlClass = totalPnl >= 0 ? 'positive' : 'negative';
             const totalPnlPct   = totalInvested > 0 ? (totalPnl / totalInvested) * 100 : 0;

@@ -96,24 +96,36 @@ def parse_flex_xml(xml_file: Path) -> dict:
     with COST_BASIS_FILE.open("w") as f:
         json.dump(cost_basis_map, f, indent=2)
 
-    # Calculate percentages (based on total account value so cash is factored in)
-    for pos in positions:
-        if total_value > 0:
-            pos["percentage"] = round((pos["market_value"] / total_value) * 100, 2)
-
-    # Find cash
-    cash = 0
+    # Read cash balance from the Flex XML
+    cash_value = 0.0
     for cash_elem in root.findall(".//CashReport/CashBalance"):
-        currency = cash_elem.get("currency")
-        if currency == "USD":
-            cash = float(cash_elem.get("value", 0))
+        if cash_elem.get("currency") == "USD":
+            cash_value = float(cash_elem.get("value", 0))
+
+    # If the XML doesn't have a CashReport, fall back to reading the
+    # EquitySummaryByReportDateInBase net-liquidation value to derive cash.
+    if cash_value == 0.0:
+        for eq in root.findall(".//EquitySummaryByReportDateInBase"):
+            net_liq = eq.get("total")
+            if net_liq:
+                cash_value = max(0.0, round(float(net_liq) - total_value, 2))
+                break
+
+    # True account value = equity + cash
+    total_account_value = round(total_value + cash_value, 2)
+
+    # Calculate percentages based on full account value (equity + cash)
+    for pos in positions:
+        if total_account_value > 0:
+            pos["percentage"] = round((pos["market_value"] / total_account_value) * 100, 2)
 
     return {
         "date": stmt_date,
         "timestamp": datetime.now().isoformat(),
         "positions": sorted(positions, key=lambda x: x["market_value"], reverse=True),
-        "total_market_value": total_value,
-        "cash": cash,
+        "equity_value": round(total_value, 2),
+        "cash_value": round(cash_value, 2),
+        "total_market_value": total_account_value,   # equity + cash = true account value
     }
 
 
@@ -174,8 +186,10 @@ def update_ledger(snapshot: dict, returns: dict):
     ledger[snap_date] = {
         "timestamp": snapshot["timestamp"],
         "positions": snapshot["positions"],
-        "total_market_value": snapshot["total_market_value"],
-        "cash": snapshot["cash"],
+        "equity_value": snapshot.get("equity_value", snapshot["total_market_value"]),
+        "cash_value": snapshot.get("cash_value", 0.0),
+        "total_market_value": snapshot["total_market_value"],   # equity + cash
+        "total_invested_value": returns["total_invested"],
         "returns": returns,
     }
 
