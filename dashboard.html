@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 30px 20px;
         }
@@ -52,6 +52,7 @@
             color: #bbb;
         }
 
+        /* ── Metric Cards ── */
         .metrics-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -82,36 +83,37 @@
         }
 
         .metric-value {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
         }
 
         .metric-subtext {
-            font-size: 13px;
+            font-size: 14px;
             color: #999;
+            font-weight: 500;
         }
 
-        .metric-value.positive {
-            color: #26a69a;
-        }
+        .metric-value.positive { color: #26a69a; }
+        .metric-value.negative { color: #ef5350; }
+        .metric-subtext.positive { color: #26a69a; }
+        .metric-subtext.negative { color: #ef5350; }
 
-        .metric-value.negative {
-            color: #ef5350;
-        }
-
+        /* Portfolio Value card: two sub-blocks */
         .split-metrics {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
+            margin-top: 4px;
         }
 
         .split-metric {
             background: #1f1f1f;
             padding: 15px;
             border-radius: 6px;
-            border: 1px solid #333;
+            border: 1px solid #2e2e2e;
         }
 
         .split-metric-label {
@@ -123,15 +125,38 @@
         }
 
         .split-metric-value {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
             color: #ffffff;
+        }
+
+        .split-metric-delta {
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        /* ── Section title ── */
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 40px 0 16px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            color: #ffffff;
+        }
+
+        /* ── Holdings Table ── */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 8px;
+            border: 1px solid #333;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 30px;
+            min-width: 820px;
         }
 
         table thead {
@@ -140,59 +165,95 @@
         }
 
         table th {
-            padding: 12px;
+            padding: 12px 14px;
             text-align: right;
-            font-size: 11px;
+            font-size: 10px;
             color: #888;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             font-weight: 600;
+            white-space: nowrap;
         }
 
-        table th:first-child {
+        table th:first-child,
+        table th.align-left {
             text-align: left;
         }
 
         table td {
-            padding: 12px;
+            padding: 13px 14px;
             text-align: right;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #2c2c2c;
             font-size: 13px;
+            white-space: nowrap;
         }
 
         table td:first-child {
             text-align: left;
-            font-weight: 500;
+            font-weight: 700;
             color: #ffffff;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 13px;
+            letter-spacing: 0.3px;
         }
 
-        table tr:hover {
-            background: #2a2a2a;
+        table td.name-cell {
+            text-align: left;
+            font-weight: 400;
+            color: #aaa;
+            font-size: 12px;
+            font-family: inherit;
+            min-width: 170px;
+            max-width: 220px;
+            white-space: normal;
         }
 
-        .positive {
-            color: #26a69a;
+        table tr:last-child td { border-bottom: none; }
+
+        table tr:hover td {
+            background: #242424;
         }
 
-        .negative {
-            color: #ef5350;
-        }
-
-        .section-title {
-            font-size: 16px;
+        table tfoot td {
+            border-top: 2px solid #444;
+            border-bottom: none;
             font-weight: 600;
-            margin: 40px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #333;
-            color: #ffffff;
+            color: #ccc;
+            background: #252525;
+            font-size: 12px;
         }
 
+        table tfoot td:first-child {
+            color: #888;
+            font-family: inherit;
+        }
+
+        .positive { color: #26a69a; }
+        .negative { color: #ef5350; }
+        .neutral  { color: #888; }
+
+        /* ── About section ── */
+        .about-section {
+            background: #252525;
+            border: 1px solid #333;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .about-section p { margin-bottom: 6px; }
+        .about-section p:last-child { margin-bottom: 0; }
+        .about-section strong { color: #ffffff; }
+
+        /* ── Footer ── */
         .footer {
             border-top: 1px solid #333;
             padding-top: 20px;
             margin-top: 50px;
             font-size: 11px;
-            color: #666;
+            color: #555;
             text-align: center;
         }
 
@@ -200,24 +261,6 @@
             text-align: center;
             padding: 40px 20px;
             color: #666;
-        }
-
-        .about-section {
-            background: #252525;
-            border: 1px solid #333;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            font-size: 13px;
-            line-height: 1.8;
-        }
-
-        .about-section p {
-            margin-bottom: 12px;
-        }
-
-        .about-section strong {
-            color: #ffffff;
         }
     </style>
 </head>
@@ -244,11 +287,11 @@
 
         <div class="about-section">
             <p><strong>📊 About This Dashboard</strong></p>
-            <p><strong>Market Value:</strong> Current portfolio worth at latest market close</p>
-            <p><strong>Invested Value:</strong> Initial capital deployed ($42,452)</p>
-            <p><strong>Total Return:</strong> Simple return % since inception</p>
-            <p><strong>XIRR:</strong> Internal Rate of Return (annualized, accounting for cash flows)</p>
-            <p style="margin-top: 15px; font-size: 12px; color: #888;">Last updated: <span id="last-updated">--</span></p>
+            <p><strong>Invested Capital:</strong> Initial capital deployed into each position at purchase price</p>
+            <p><strong>Market Value:</strong> Current worth at latest market close</p>
+            <p><strong>Total Return:</strong> Simple absolute return % since inception</p>
+            <p><strong>XIRR:</strong> Internal Rate of Return (annualised), accounting for timing of cash flows</p>
+            <p style="margin-top: 12px; font-size: 12px; color: #666;">Last updated: <span id="last-updated">--</span></p>
         </div>
 
         <div class="footer">
@@ -257,111 +300,186 @@
     </div>
 
     <script>
-        // Fetch and display metrics
+        // ── Ticker name lookup ──────────────────────────────────────────────
+        const TICKER_NAMES = {
+            'IAU':  'iShares Gold Trust',
+            'SOXX': 'iShares Semiconductor ETF',
+            'EMXC': 'iShares MSCI EM ex China ETF',
+            'PPA':  'Invesco Aerospace & Defense ETF',
+            'VOOG': 'Vanguard S&P 500 Growth ETF',
+            'AMZN': 'Amazon.com Inc.',
+            'GOOG': 'Alphabet Inc. (Google)',
+            'GEV':  'GE Vernova Inc.',
+            'NBIS': 'Nebius Group N.V.',
+            'IBIT': 'iShares Bitcoin Trust ETF',
+            'SMIN': 'iShares MSCI India Small-Cap ETF',
+            'EWY':  'iShares MSCI South Korea ETF',
+            'QQQM': 'Invesco NASDAQ 100 ETF'
+        };
+
+        // ── Main loader ─────────────────────────────────────────────────────
         function loadDashboard() {
-            // Try to load from metrics JSON
-            fetch('docs/paper/dashboard_metrics.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('Metrics not found');
-                    return response.json();
-                })
+            Promise.resolve(DASHBOARD_METRICS)
                 .then(metrics => displayMetrics(metrics))
                 .catch(error => {
                     console.log('Using placeholder data:', error);
                     displayMetrics(getPlaceholderMetrics());
                 });
 
-            // Load positions
-            loadPositions();
+            Promise.resolve(DASHBOARD_LEDGER)
+                .then(ledger => displayPositions(ledger))
+                .catch(error => {
+                    document.getElementById('positions-container').innerHTML =
+                        '<div class="loading">Positions data not available yet</div>';
+                });
         }
 
+        // ── Metric cards ────────────────────────────────────────────────────
         function displayMetrics(metrics) {
+            const retPct   = metrics.total_return_percent;
+            const retDol   = metrics.total_return_dollars;
+            const xirrPct  = metrics.xirr_percent;
+            const retClass = retPct  >= 0 ? 'positive' : 'negative';
+            const xirrClass= xirrPct >= 0 ? 'positive' : 'negative';
+            const sign     = v => v >= 0 ? '+' : '';
+
+            const fmt0 = v => v.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            const fmt2 = v => v.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
             const html = `
                 <div class="metric-card">
                     <div class="metric-label">Portfolio Value</div>
                     <div class="split-metrics">
                         <div class="split-metric">
-                            <div class="split-metric-label">Market Value</div>
-                            <div class="split-metric-value">$${metrics.market_value.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</div>
+                            <div class="split-metric-label">Invested Capital</div>
+                            <div class="split-metric-value">$${fmt0(metrics.invested_value)}</div>
                         </div>
                         <div class="split-metric">
-                            <div class="split-metric-label">Invested</div>
-                            <div class="split-metric-value">$${metrics.invested_value.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</div>
+                            <div class="split-metric-label">Market Value</div>
+                            <div class="split-metric-value">$${fmt0(metrics.market_value)}</div>
+                            <div class="split-metric-delta ${retClass}" style="font-size:11px; margin-top:4px;">
+                                ${sign(retDol)}$${fmt2(Math.abs(retDol))}
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-label">Total Return</div>
-                    <div class="metric-value ${metrics.total_return_percent >= 0 ? 'positive' : 'negative'}">
-                        ${metrics.total_return_percent >= 0 ? '+' : ''}${metrics.total_return_percent.toFixed(2)}%
+                    <div class="metric-value ${retClass}">
+                        ${sign(retPct)}${retPct.toFixed(2)}%
                     </div>
-                    <div class="metric-subtext">${metrics.total_return_percent >= 0 ? '+' : ''}$${metrics.total_return_dollars.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+                    <div class="metric-subtext ${retClass}">
+                        ${sign(retDol)}$${fmt2(Math.abs(retDol))} since inception
+                    </div>
                 </div>
 
                 <div class="metric-card">
-                    <div class="metric-label">XIRR (Annualized)</div>
-                    <div class="metric-value ${metrics.xirr_percent >= 0 ? 'positive' : 'negative'}">
-                        ${metrics.xirr_percent >= 0 ? '+' : ''}${metrics.xirr_percent.toFixed(2)}%
+                    <div class="metric-label">XIRR (Annualised)</div>
+                    <div class="metric-value ${xirrClass}">
+                        ${sign(xirrPct)}${xirrPct.toFixed(2)}%
                     </div>
-                    <div class="metric-subtext">${metrics.days_invested || 0} days invested</div>
+                    <div class="metric-subtext">${metrics.days_invested || 0} day${metrics.days_invested !== 1 ? 's' : ''} invested</div>
                 </div>
             `;
 
             document.getElementById('metrics-container').innerHTML = html;
-            document.getElementById('last-updated').textContent = new Date(metrics.updated_at).toLocaleString();
+            document.getElementById('last-updated').textContent =
+                new Date(metrics.updated_at).toLocaleString();
         }
 
-        function loadPositions() {
-            fetch('docs/paper/performance_ledger_paper.json')
-                .then(response => response.json())
-                .then(ledger => {
-                    if (Object.keys(ledger).length === 0) {
-                        document.getElementById('positions-container').innerHTML = '<div class="loading">No positions yet</div>';
-                        return;
-                    }
+        // ── Holdings table ──────────────────────────────────────────────────
+        function displayPositions(ledger) {
+            if (!ledger || Object.keys(ledger).length === 0) {
+                document.getElementById('positions-container').innerHTML =
+                    '<div class="loading">No positions yet</div>';
+                return;
+            }
 
-                    const latestDate = Object.keys(ledger).sort().pop();
-                    const snapshot = ledger[latestDate];
-                    const positions = snapshot.positions || [];
+            const latestDate = Object.keys(ledger).sort().pop();
+            const snapshot   = ledger[latestDate];
+            const positions  = snapshot.positions || [];
 
-                    if (positions.length === 0) {
-                        document.getElementById('positions-container').innerHTML = '<div class="loading">No positions yet</div>';
-                        return;
-                    }
+            if (positions.length === 0) {
+                document.getElementById('positions-container').innerHTML =
+                    '<div class="loading">No positions yet</div>';
+                return;
+            }
 
-                    let html = `
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Ticker</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                    <th>Market Value</th>
-                                    <th>% Portfolio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    `;
+            const fmt2 = v => v.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            const sign = v => v >= 0 ? '+' : '−';
 
-                    positions.forEach(pos => {
-                        html += `
+            let totalInvested = 0;
+            let totalMarket   = 0;
+            let totalPnl      = 0;
+
+            let rows = '';
+            positions.forEach(pos => {
+                // Cost basis: use stored value, fall back to market_price (Day 1)
+                const costBasis      = pos.cost_basis    !== undefined ? pos.cost_basis    : pos.market_price;
+                const investedAmount = pos.invested_amount !== undefined ? pos.invested_amount : (pos.quantity * costBasis);
+                const pnlDollars     = pos.pnl_dollars  !== undefined ? pos.pnl_dollars  : (pos.market_value - investedAmount);
+                const pnlPct         = pos.pnl_pct      !== undefined ? pos.pnl_pct      : (investedAmount > 0 ? (pnlDollars / investedAmount) * 100 : 0);
+
+                const pnlClass = pnlDollars >= 0 ? 'positive' : 'negative';
+                const name     = TICKER_NAMES[pos.symbol] || pos.symbol;
+
+                totalInvested += investedAmount;
+                totalMarket   += pos.market_value;
+                totalPnl      += pnlDollars;
+
+                rows += `
+                    <tr>
+                        <td>${pos.symbol}</td>
+                        <td class="name-cell">${name}</td>
+                        <td>${pos.quantity % 1 === 0 ? pos.quantity.toFixed(0) : pos.quantity.toFixed(2)}</td>
+                        <td>$${fmt2(investedAmount)}</td>
+                        <td>$${fmt2(pos.market_value)}</td>
+                        <td class="${pnlClass}">${sign(pnlDollars)}$${fmt2(Math.abs(pnlDollars))}</td>
+                        <td class="${pnlClass}">${sign(pnlPct)}${Math.abs(pnlPct).toFixed(2)}%</td>
+                        <td>${pos.percentage.toFixed(2)}%</td>
+                    </tr>
+                `;
+            });
+
+            const totalPnlClass = totalPnl >= 0 ? 'positive' : 'negative';
+            const totalPnlPct   = totalInvested > 0 ? (totalPnl / totalInvested) * 100 : 0;
+
+            const html = `
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <td>${pos.symbol}</td>
-                                <td>${pos.quantity.toFixed(2)}</td>
-                                <td>$${pos.market_price.toFixed(2)}</td>
-                                <td>$${pos.market_value.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                                <td>${pos.percentage.toFixed(2)}%</td>
+                                <th>Ticker</th>
+                                <th class="align-left">Name</th>
+                                <th>Qty</th>
+                                <th>Invested</th>
+                                <th>Market Value</th>
+                                <th>P&amp;L ($)</th>
+                                <th>P&amp;L (%)</th>
+                                <th>% Portfolio</th>
                             </tr>
-                        `;
-                    });
+                        </thead>
+                        <tbody>
+                            ${rows}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>TOTAL</td>
+                                <td class="name-cell" style="color:#666;">—</td>
+                                <td>—</td>
+                                <td>$${fmt2(totalInvested)}</td>
+                                <td>$${fmt2(totalMarket)}</td>
+                                <td class="${totalPnlClass}">${totalPnl >= 0 ? '+' : '−'}$${fmt2(Math.abs(totalPnl))}</td>
+                                <td class="${totalPnlClass}">${totalPnl >= 0 ? '+' : '−'}${Math.abs(totalPnlPct).toFixed(2)}%</td>
+                                <td>—</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            `;
 
-                    html += `</tbody></table>`;
-                    document.getElementById('positions-container').innerHTML = html;
-                })
-                .catch(error => {
-                    document.getElementById('positions-container').innerHTML = '<div class="loading">Positions data not available yet</div>';
-                });
+            document.getElementById('positions-container').innerHTML = html;
         }
 
         function getPlaceholderMetrics() {
