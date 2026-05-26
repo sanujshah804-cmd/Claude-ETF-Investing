@@ -260,7 +260,7 @@
         // Fetch and display metrics
         function loadDashboard() {
             // Try to load from metrics JSON
-            fetch('paper/dashboard_metrics.json')
+            fetch('docs/paper/dashboard_metrics.json')
                 .then(response => {
                     if (!response.ok) throw new Error('Metrics not found');
                     return response.json();
@@ -313,7 +313,7 @@
         }
 
         function loadPositions() {
-            fetch('paper/performance_ledger_paper.json')
+            fetch('docs/paper/performance_ledger_paper.json')
                 .then(response => response.json())
                 .then(ledger => {
                     if (Object.keys(ledger).length === 0) {
