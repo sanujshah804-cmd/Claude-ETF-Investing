@@ -1,0 +1,64 @@
+name: Daily Dashboard Automation
+
+on:
+  schedule:
+    # Run daily at 11:15 UTC (3:15 PM Dubai time)
+    # Adjust the time if needed: change '15 11' to your preferred 'minute hour'
+    - cron: '15 11 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Check out the latest code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy numpy-financial requests
+      
+      # Run Flex pull for PAPER account ONLY
+      - name: Pull IBKR Flex data (Paper Trading)
+        env:
+          IBKR_FLEX_TOKEN_PAPER: ${{ secrets.IBKR_FLEX_TOKEN_PAPER }}
+          IBKR_FLEX_QUERY_ID_PAPER: ${{ secrets.IBKR_FLEX_QUERY_ID_PAPER }}
+          PAPER_ACCOUNT_ID: ${{ secrets.PAPER_ACCOUNT_ID }}
+        run: |
+          python3 scripts/ibkr_flex_pull_paper.py
+      
+      # Aggregate positions from daily Flex pull
+      - name: Aggregate positions
+        run: |
+          python3 scripts/paper_account_aggregator.py
+      
+      # Calculate XIRR metrics
+      - name: Calculate XIRR metrics
+        run: |
+          python3 scripts/xirr_calculator.py
+      
+      # Update dashboard
+      - name: Update dashboard
+        run: |
+          python3 scripts/dashboard_automation.py
+      
+      # Commit and push changes
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Dashboard Automation"
+          git add docs/index.html DASHBOARD_AUDIT.md
+          git diff --cached --quiet || git commit -m "📊 Automated dashboard update - $(date +'%Y-%m-%d %H:%M:%S UTC')"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
