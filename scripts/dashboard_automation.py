@@ -19,6 +19,8 @@ PROJECT_DIR = Path(__file__).parent.parent.resolve()
 SCRIPTS_DIR = PROJECT_DIR / "scripts"
 DASHBOARD_FILE = PROJECT_DIR / "dashboard.html"
 GITHUB_DOCS_DIR = PROJECT_DIR / "docs"
+PAPER_REPORTS_DIR = PROJECT_DIR / "reports" / "paper"
+GITHUB_DOCS_PAPER_DIR = GITHUB_DOCS_DIR / "paper"
 
 print(f"[Dashboard Automation] Starting at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
@@ -37,6 +39,32 @@ try:
         sys.exit(1)
 except Exception as e:
     print(f"ERROR calculating XIRR: {e}")
+    sys.exit(1)
+
+# Step 1.5: Copy JSON data files to docs/paper/ for GitHub Pages
+print("\n[Step 1.5] Copying JSON data files to docs/paper/...")
+try:
+    GITHUB_DOCS_PAPER_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Copy metrics JSON
+    metrics_src = PAPER_REPORTS_DIR / "dashboard_metrics.json"
+    metrics_dst = GITHUB_DOCS_PAPER_DIR / "dashboard_metrics.json"
+    if metrics_src.exists():
+        shutil.copy(metrics_src, metrics_dst)
+        print(f"✅ Metrics copied to {metrics_dst}")
+    else:
+        print(f"⚠️ Metrics file not found at {metrics_src}")
+
+    # Copy ledger JSON
+    ledger_src = PAPER_REPORTS_DIR / "performance_ledger_paper.json"
+    ledger_dst = GITHUB_DOCS_PAPER_DIR / "performance_ledger_paper.json"
+    if ledger_src.exists():
+        shutil.copy(ledger_src, ledger_dst)
+        print(f"✅ Ledger copied to {ledger_dst}")
+    else:
+        print(f"⚠️ Ledger file not found at {ledger_src}")
+except Exception as e:
+    print(f"ERROR copying JSON files: {e}")
     sys.exit(1)
 
 # Step 2: Copy dashboard to GitHub docs folder
