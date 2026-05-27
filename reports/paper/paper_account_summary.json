@@ -2,14 +2,14 @@
   "latest_snapshot": {
     "snap_date": "2026-05-26",
     "days_invested": 1,
-    "total_invested": 39254.53,
+    "total_invested": 39055.77,
     "current_value": 39254.53,
-    "total_return_dollars": 0.0,
-    "total_return_pct": 0.0,
+    "total_return_dollars": 198.76,
+    "total_return_pct": 0.51,
     "annualized_return_pct": 0,
-    "ytd_return_pct": 0.0,
-    "mtd_return_pct": 0.0
+    "ytd_return_pct": 0.51,
+    "mtd_return_pct": 0.51
   },
   "position_count": 13,
-  "last_updated": "2026-05-27T16:36:31.203807"
+  "last_updated": "2026-05-27T16:42:36.110045"
 }

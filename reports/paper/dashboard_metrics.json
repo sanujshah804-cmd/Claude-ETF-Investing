@@ -1,11 +1,11 @@
 {
   "xirr_percent": 0.0,
-  "total_return_percent": 0.0,
+  "total_return_percent": 0.51,
   "market_value": 39254.53,
-  "invested_value": 39254.53,
-  "total_return_dollars": 0.0,
+  "invested_value": 39055.77,
+  "total_return_dollars": 198.76,
   "days_invested": 1,
   "latest_date": "2026-05-26",
   "status": "Calculated",
-  "updated_at": "2026-05-27T16:36:38.054133"
+  "updated_at": "2026-05-27T16:42:36.167190"
 }
