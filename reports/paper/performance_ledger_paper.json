@@ -1,9 +1,10 @@
 {
   "2026-05-26": {
     "date": "2026-05-26",
+    "equity_value": 39042.58,
+    "cash_value": 3409.42,
     "total_market_value": 42452.00,
     "total_invested_value": 42452.00,
-    "cash_value": 3409.42,
     "positions": [
       {"symbol": "IAU",  "quantity": 45.5,  "cost_basis": 116.522, "market_price": 116.50, "invested_amount": 5301.75, "market_value": 5301.75, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 12.49},
       {"symbol": "SOXX", "quantity": 12.0,  "cost_basis": 318.47, "market_price": 318.47, "invested_amount": 3821.64, "market_value": 3821.64, "pnl_dollars": 0.00, "pnl_pct": 0.00, "percentage": 9.00},
