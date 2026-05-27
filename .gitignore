@@ -39,7 +39,9 @@ build/
 *~
 .DS_Store
 
-# Temporary files
+# Temporary / test files
 *.tmp
 *.log
 *.[0-9].bak
+test_dashboard.html
+test_*.html
