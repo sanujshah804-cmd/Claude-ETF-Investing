@@ -15,7 +15,7 @@ LEDGER_FILE = PAPER_REPORTS_DIR / "performance_ledger_paper.json"
 METRICS_FILE = PAPER_REPORTS_DIR / "dashboard_metrics.json"
 
 INCEPTION_DATE = datetime(2026, 5, 26)
-INITIAL_INVESTMENT = 42452.00
+INITIAL_INVESTMENT = 39254.53  # Actual equity at account inception (May 26 2026)
 
 def load_ledger():
     if not LEDGER_FILE.exists():

@@ -47,18 +47,28 @@ def parse_flex_xml(xml_file: Path) -> dict:
     if stmt_elem is None:
         return None
 
-    stmt_date = stmt_elem.get("periodEndString", "unknown")
+    # IBKR Flex XML uses toDate in YYYYMMDD format (e.g. "20260526")
+    raw_date = stmt_elem.get("toDate") or stmt_elem.get("periodEndString") or stmt_elem.get("fromDate", "unknown")
+    # Convert YYYYMMDD → YYYY-MM-DD so datetime.fromisoformat() can parse it
+    if raw_date != "unknown" and len(raw_date) == 8 and raw_date.isdigit():
+        stmt_date = f"{raw_date[:4]}-{raw_date[4:6]}-{raw_date[6:]}"
+    else:
+        stmt_date = raw_date
 
     # Extract positions
     positions = []
     total_value = 0
 
     # Find OpenPositions section
+    # IBKR Flex XML uses: position (qty), markPrice, positionValue — only SUMMARY rows
     for pos in root.findall(".//OpenPosition"):
+        # Skip DETAIL-level rows to avoid double-counting
+        if pos.get("levelOfDetail", "SUMMARY") == "DETAIL":
+            continue
         symbol = pos.get("symbol")
-        quantity = float(pos.get("quantity", 0))
+        quantity = float(pos.get("position") or pos.get("quantity") or 0)
         market_price = float(pos.get("markPrice", 0))
-        market_value = float(pos.get("markValue", 0))
+        market_value = float(pos.get("positionValue") or pos.get("markValue") or 0)
 
         if symbol and quantity != 0:
             positions.append({
@@ -138,7 +148,7 @@ def calculate_returns(snapshot: dict, ledger: dict) -> dict:
 
     # Day invested return
     days_invested = (snap_date - PAPER_ACCOUNT_START_DATE.date()).days + 1
-    invested_value_start = 42452  # Starting value of paper account
+    invested_value_start = 39254.53  # Starting value of paper account (actual equity at inception, May 26 2026)
 
     total_return_dollars = total_value - invested_value_start
     total_return_pct = (total_return_dollars / invested_value_start * 100) if invested_value_start > 0 else 0
