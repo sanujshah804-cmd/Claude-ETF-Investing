@@ -148,7 +148,7 @@ def calculate_returns(snapshot: dict, ledger: dict) -> dict:
 
     # Day invested return
     days_invested = (snap_date - PAPER_ACCOUNT_START_DATE.date()).days + 1
-    invested_value_start = 39055.77  # Actual fill cost at inception (May 26 2026); closing equity was 39254.53
+    invested_value_start = 45493.66  # Total fill cost: May 26 ($39,055.77) + May 27 top-up ($6,437.89)
 
     total_return_dollars = total_value - invested_value_start
     total_return_pct = (total_return_dollars / invested_value_start * 100) if invested_value_start > 0 else 0
