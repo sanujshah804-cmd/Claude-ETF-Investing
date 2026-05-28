@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-05-29T01:47:27.326552+04:00",
+  "inception_date": "2026-05-26",
+  "benchmarks": {
+    "SPY": {
+      "symbol": "SPY",
+      "inception_price": 750.59,
+      "current_price": 754.6,
+      "return_pct": 0.53,
+      "from_date": "2026-05-26",
+      "to_date": "2026-05-28"
+    },
+    "^NSEI": {
+      "symbol": "^NSEI",
+      "inception_price": 23913.6992,
+      "current_price": 23907.1504,
+      "return_pct": -0.03,
+      "from_date": "2026-05-26",
+      "to_date": "2026-05-27"
+    }
+  },
+  "model_portfolio": {
+    "total_invested": 47197.840000000004,
+    "total_live_mv": 47427.83
+  }
+}
