@@ -1,6 +1,6 @@
 # Model Portfolio — Institutional Screener Report
 
-**Generated:** 2026-05-29 01:47 +04 · **Framework:** 3-gate + 100-pt confidence · **IRR Target:** 20%+
+**Generated:** 2026-06-01 16:59 +04 · **Framework:** 3-gate + 100-pt confidence · **IRR Target:** 20%+
 **Inception:** 2026-05-26 · **Ledger NAV:** $45,593.32 (May 27) · **Return (ledger):** +0.22%
 
 > ⚠️ **Note:** 4 positions are *pending* (trades executed May 28, XML not yet uploaded).
@@ -15,9 +15,9 @@
 
 | Signal | Value | Gate | Status |
 |--------|-------|------|--------|
-| VIX | 15.9 | <20 = deploy | ✅ DEPLOY |
-| DXY | 99.0 | <107 = EM-friendly | ✅ EM-FRIENDLY |
-| Yield curve (10Y–2Y) | +0.48pp | Positive = normal | ✅ NORMAL |
+| VIX | 15.8 | <20 = deploy | ✅ DEPLOY |
+| DXY | 99.1 | <107 = EM-friendly | ✅ EM-FRIENDLY |
+| Yield curve (10Y–2Y) | +0.47pp | Positive = normal | ✅ NORMAL |
 | HY credit spreads | 2.72% | <4% = healthy | ✅ HEALTHY |
 
 ---
@@ -37,11 +37,11 @@
 | 9 | **AMZN** | Amazon | 12.0537 | $267.78 | $3,228 | $265.29 | $3,198 | 6.7% | 10.0% | +3.3pp |
 | 10 | **QQQM** | Nasdaq-100 ETF | 6.9806 | $299.30 | $2,089 | $300.68 | $2,099 | 4.4% | 3.6% | -0.8pp |
 | 11 | **GEV** | GE Vernova | 1.4181 | $1049.26 | $1,488 | $1070.47 | $1,518 | 3.2% | 5.0% | +1.8pp |
-| 12 | **TSM** ⏳ | Taiwan Semiconductor | 2.6828 | $424.86 | $1,140 | $424.86 | $1,140 | 2.4% | 2.5% | +0.1pp |
-| 13 | **CIEN** ⏳ | Ciena Corp | 1.1994 | $570.18 | $684 | $570.18 | $684 | 1.4% | 1.5% | +0.1pp |
+| 12 | **TSM** ⏳ | Taiwan Semiconductor | 2.7239 | $418.45 | $1,140 | $418.45 | $1,140 | 2.4% | 2.5% | +0.1pp |
+| 13 | **CIEN** ⏳ | Ciena Corp | 1.1787 | $580.23 | $684 | $580.23 | $684 | 1.4% | 1.5% | +0.1pp |
 | 14 | **NBIS** | Nebius Group | 2.9172 | $218.28 | $637 | $208.06 | $607 | 1.3% | 1.1% | -0.2pp |
-| 15 | **CEG** ⏳ | Constellation Energy | 1.5924 | $286.31 | $456 | $286.31 | $456 | 1.0% | 1.0% | +0.0pp |
-| 16 | **RKLB** ⏳ | Rocket Lab | 1.8480 | $148.03 | $274 | $148.03 | $274 | 0.6% | 0.6% | +0.0pp |
+| 15 | **CEG** ⏳ | Constellation Energy | 1.5845 | $287.75 | $456 | $287.75 | $456 | 1.0% | 1.0% | +0.0pp |
+| 16 | **RKLB** ⏳ | Rocket Lab | 1.9066 | $143.48 | $274 | $143.48 | $274 | 0.6% | 0.6% | +0.0pp |
 | | **TOTAL** | | | | **$47,198** | | **$47,428** | 100% | | |
 
 **Total Return (live prices):** $229.99 (+0.49%)
@@ -63,11 +63,11 @@
 | **AMZN** | 97/100 | STRONGEST CONVICTION | ✅ INTACT | 57 | ↑ | ↑ | -3.5% | ✅ ADD |
 | **QQQM** | 90/100 | STRONGEST CONVICTION | ✅ INTACT | 75 | ↑ | ↑ | 0.0% | ✅ HOLD |
 | **GEV** | 94/100 | STRONGEST CONVICTION | ✅ INTACT | 56 | ↑ | ↑ | -6.9% | ✅ HOLD |
-| **TSM** | 96/100 | STRONGEST CONVICTION | ✅ INTACT | 55 | ↑ | ↑ | 0.0% | ✅ HOLD |
-| **CIEN** | 93/100 | STRONGEST CONVICTION | ✅ INTACT | 56 | ↑ | ↑ | -5.3% | ✅ HOLD |
+| **TSM** | 96/100 | STRONGEST CONVICTION | ✅ INTACT | 53 | ↑ | ↑ | -1.5% | ✅ HOLD |
+| **CIEN** | 93/100 | STRONGEST CONVICTION | ✅ INTACT | 57 | ↑ | ↑ | -3.7% | ✅ HOLD |
 | **NBIS** | 87/100 | STRONGEST CONVICTION | ✅ INTACT | 60 | ↑ | ↑ | -5.9% | ✅ HOLD |
-| **CEG** | 71/100 | WATCH ONLY | ⚠️ WEAKENING | 39 | ↓ | ↓ | -28.8% | ✅ HOLD |
-| **RKLB** | 81/100 | HIGH CONVICTION | ✅ INTACT | 80 | ↑ | ↑ | -1.5% | ✅ HOLD |
+| **CEG** | 71/100 | WATCH ONLY | ⚠️ WEAKENING | 42 | ↓ | ↓ | -28.5% | ✅ HOLD |
+| **RKLB** | 81/100 | HIGH CONVICTION | ✅ INTACT | 71 | ↑ | ↑ | -4.5% | ✅ HOLD |
 
 ---
 
@@ -116,8 +116,8 @@
 | Portfolio | Return Since May 26 | Notes |
 |-----------|--------------------|----|
 | **Model Portfolio** | **+0.49%** | Based on live prices vs invested cost |
-| S&P 500 (SPY) | +0.53% | Since 2026-05-26 |
-| Nifty 50 (^NSEI) | -0.03% | Since 2026-05-26 |
+| S&P 500 (SPY) | +0.78% | Since 2026-05-26 |
+| Nifty 50 (^NSEI) | -2.22% | Since 2026-05-26 |
 | Live Portfolio | See IBKR app | Updated from IBKR daily |
 
 ---
@@ -194,13 +194,13 @@
 - Thesis: AI foundry monopoly
 - Driver: AI hardware capex
 - Exit if: US-China chip sanctions or fab market share loss >5pp
-- RSI 55 · above 50D MA · above 200D MA · 0.0% from 52W high
+- RSI 53 · above 50D MA · above 200D MA · -1.5% from 52W high
 
 **CIEN — Ciena Corp** | Conf 93/100 | INTACT
 - Thesis: Optical networking for AI
 - Driver: Hyperscaler networking capex
 - Exit if: Enterprise optical capex freeze or margin compression
-- RSI 56 · above 50D MA · above 200D MA · -5.3% from 52W high
+- RSI 57 · above 50D MA · above 200D MA · -3.7% from 52W high
 
 **NBIS — Nebius Group** | Conf 87/100 | INTACT
 - Thesis: AI datacenter ARR
@@ -212,14 +212,14 @@
 - Thesis: Nuclear for AI power
 - Driver: Hyperscaler PPAs
 - Exit if: Nuclear license rejection or hyperscaler PPA cancellation
-- RSI 39 · below 50D MA · below 200D MA · -28.8% from 52W high
+- RSI 42 · below 50D MA · below 200D MA · -28.5% from 52W high
 
 **RKLB — Rocket Lab** | Conf 81/100 | INTACT
 - Thesis: Space infrastructure
 - Driver: DoD + commercial launch
 - Exit if: Neutron development failure or launch manifest cut
-- RSI 80 · above 50D MA · above 200D MA · -1.5% from 52W high
+- RSI 71 · above 50D MA · above 200D MA · -4.5% from 52W high
 
 ---
 
-*Screener run: 2026-05-29T01:47:27+0400*
+*Screener run: 2026-06-01T16:59:10+0400*

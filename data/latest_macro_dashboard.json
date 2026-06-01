@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-06-01T16:58:41.225642+04:00",
+  "fred_configured": true,
+  "fred": {
+    "VIXCLS": {
+      "date": "2026-05-28",
+      "value": "15.74"
+    },
+    "FEDFUNDS": {
+      "date": "2026-04-01",
+      "value": "3.64"
+    },
+    "DGS10": {
+      "date": "2026-05-28",
+      "value": "4.45"
+    },
+    "DGS2": {
+      "date": "2026-05-28",
+      "value": "3.99"
+    },
+    "T10Y2Y": {
+      "date": "2026-05-29",
+      "value": "0.47"
+    },
+    "UNRATE": {
+      "date": "2026-04-01",
+      "value": "4.3"
+    },
+    "CPIAUCSL": {
+      "date": "2026-04-01",
+      "value": "332.407"
+    },
+    "BAMLH0A0HYM2": {
+      "date": "2026-05-28",
+      "value": "2.72"
+    }
+  },
+  "market": {
+    "results": {
+      "^VIX": {
+        "label": "VIX",
+        "date": "2026-06-01",
+        "value": 15.819999694824219
+      },
+      "DX-Y.NYB": {
+        "label": "DXY dollar index",
+        "date": "2026-06-01",
+        "value": 99.05400085449219
+      },
+      "BZ=F": {
+        "label": "Brent crude futures",
+        "date": "2026-06-01",
+        "value": 92.81999969482422
+      }
+    },
+    "errors": {}
+  },
+  "sectors": {
+    "results": {
+      "XLK": {
+        "label": "Technology",
+        "date": "2026-05-29",
+        "close": 191.02000427246094,
+        "return_1w_pct": 6.9540860831475815,
+        "return_1m_pct": 20.055309873484674,
+        "return_3m_pct": 37.06285965666969
+      },
+      "XLV": {
+        "label": "Healthcare",
+        "date": "2026-05-29",
+        "close": 149.47000122070312,
+        "return_1w_pct": 0.890993843132426,
+        "return_1m_pct": 4.641560524216981,
+        "return_3m_pct": -5.327399953957157
+      },
+      "XLF": {
+        "label": "Financials",
+        "date": "2026-05-29",
+        "close": 51.58000183105469,
+        "return_1w_pct": -0.28996271507633065,
+        "return_1m_pct": -0.6548465906803247,
+        "return_3m_pct": 1.0626559275197955
+      },
+      "XLE": {
+        "label": "Energy",
+        "date": "2026-05-29",
+        "close": 56.290000915527344,
+        "return_1w_pct": -4.802976663768921,
+        "return_1m_pct": -4.6417040833999,
+        "return_3m_pct": -0.670089296773102
+      },
+      "XLY": {
+        "label": "Consumer discretionary",
+        "date": "2026-05-29",
+        "close": 120.87000274658203,
+        "return_1w_pct": 1.8281430953077882,
+        "return_1m_pct": 3.4491668392705233,
+        "return_3m_pct": 4.932255601254765
+      },
+      "XLI": {
+        "label": "Industrials",
+        "date": "2026-05-29",
+        "close": 173.1300048828125,
+        "return_1w_pct": 1.5246620079324646,
+        "return_1m_pct": 1.8831356116967068,
+        "return_3m_pct": -2.9533325726692206
+      },
+      "XLB": {
+        "label": "Materials",
+        "date": "2026-05-29",
+        "close": 51.150001525878906,
+        "return_1w_pct": 2.2590984761573507,
+        "return_1m_pct": 0.3728462417970091,
+        "return_3m_pct": -3.516486758461046
+      },
+      "XLP": {
+        "label": "Consumer staples",
+        "date": "2026-05-29",
+        "close": 82.91000366210938,
+        "return_1w_pct": -2.067091807584265,
+        "return_1m_pct": -0.012053192301786364,
+        "return_3m_pct": -6.012082700386323
+      },
+      "XLU": {
+        "label": "Utilities",
+        "date": "2026-05-29",
+        "close": 44.41999816894531,
+        "return_1w_pct": -1.2888929578993014,
+        "return_1m_pct": -2.758323397138207,
+        "return_3m_pct": -5.571969645979502
+      },
+      "XLRE": {
+        "label": "Real estate",
+        "date": "2026-05-29",
+        "close": 43.9900016784668,
+        "return_1w_pct": -1.1460636438948346,
+        "return_1m_pct": 0.8020217546139241,
+        "return_3m_pct": 0.8325977495727388
+      },
+      "XLC": {
+        "label": "Communication services",
+        "date": "2026-05-29",
+        "close": 115.69000244140625,
+        "return_1w_pct": -0.35314042902957476,
+        "return_1m_pct": 0.34695248738179085,
+        "return_3m_pct": -1.5362869572845717
+      }
+    },
+    "errors": {}
+  }
+}
