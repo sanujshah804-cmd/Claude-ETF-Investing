@@ -1,15 +1,15 @@
 {
   "latest_snapshot": {
-    "snap_date": "2026-05-27",
-    "days_invested": 2,
-    "total_invested": 45493.66,
-    "current_value": 45593.32,
-    "total_return_dollars": 99.66,
-    "total_return_pct": 0.22,
-    "annualized_return_pct": 49.09,
-    "ytd_return_pct": 0.22,
-    "mtd_return_pct": 0.22
+    "snap_date": "2026-05-29",
+    "days_invested": 4,
+    "total_invested": 64300.55,
+    "current_value": 64747.97,
+    "total_return_dollars": 447.42,
+    "total_return_pct": 0.7,
+    "annualized_return_pct": 88.28,
+    "ytd_return_pct": 0.7,
+    "mtd_return_pct": 0.7
   },
-  "position_count": 13,
-  "last_updated": "2026-05-28T13:38:28.135801"
+  "position_count": 16,
+  "last_updated": "2026-06-01T17:09:49.751433"
 }

@@ -15,7 +15,7 @@ LEDGER_FILE = PAPER_REPORTS_DIR / "performance_ledger_paper.json"
 METRICS_FILE = PAPER_REPORTS_DIR / "dashboard_metrics.json"
 
 INCEPTION_DATE = datetime(2026, 5, 26)
-INITIAL_INVESTMENT = 45493.66  # Total fill cost: May 26 ($39,055.77) + May 27 top-up ($6,437.89)
+INITIAL_INVESTMENT = 64300.55  # Total fill cost: May 26 ($39,055.77) + May 27 ($6,437.89) + May 28 ($18,806.89)
 
 def load_ledger():
     if not LEDGER_FILE.exists():

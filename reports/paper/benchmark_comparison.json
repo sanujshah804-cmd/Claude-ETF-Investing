@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:59:10.299333+04:00",
+  "generated_at": "2026-06-01T17:10:18.344789+04:00",
   "inception_date": "2026-05-26",
   "benchmarks": {
     "SPY": {
@@ -20,7 +20,7 @@
     }
   },
   "model_portfolio": {
-    "total_invested": 47197.840000000004,
-    "total_live_mv": 47427.83
+    "total_invested": 64300.55,
+    "total_live_mv": 64536.01
   }
 }
